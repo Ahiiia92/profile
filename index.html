@@ -1,43 +1,745 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Maroussia's Profile</title>
-    <meta name="Description" content="Profile Website | Maroussia Arnault | Full-Stack Developer">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display:700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  </head>
-  <body>
+<html lang="en">
 
-<div class="container">
-  <div id="introduction" class="card-white">
-      <h1>Welcome! I'm Maroussia!</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="Profile Website | Maroussia Arnault | Full-Stack Developer">
+  <title>Maroussia Arnault - IT Consultant & Product Owner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Playfair+Display:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-
-      <div class="image-cropper">
-        <img src="images/IMG_4962.jpg" alt="profile-picture" class="profile-pic">
-      </div>
-
-
-
-      <h2>Full-Stack Developer</h2>
-      <p class="text-center">I am an IT-enthusiast interested in social businesses and entrepreneurship. I'm Full-Stack developer and available for freelancing. Besides that, I love traveling and photography.
-      </p>
-      <a href="https://github.com/Ahiiia92" class="btn-color" target="_blank">Discover my Portfolio</a>
+<body>
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" onclick="toggleNav()">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 
-    <div class="card-white">
-      <h2>Follow Me</h2>
-        <ul class="list-inline">
-          <li class="social-icon"><a href="https://www.linkedin.com/in/maroussiaarnault/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-          <li class="social-icon"><a href="https://github.com/Ahiiia92" target="_blank"><i class="fab fa-github-square"></i></a></li>
-          <li class="social-icon"><a href="https://twitter.com/Marou_arnault" target="_blank"><i class="fab fa-twitter-square"></i></a></li>
-        </ul>
+  <!-- Navigation Menu -->
+  <nav class="nav-menu" id="navMenu">
+    <h3 data-key="navigation">Navigation</h3>
+    <a href="#experience" class="nav-item" data-key="nav-experience">Professional Experience</a>
+    <a href="#skills" class="nav-item" data-key="nav-skills">Technical Skills</a>
+    <a href="#education" class="nav-item" data-key="nav-education">Education</a>
+    <a href="#languages" class="nav-item" data-key="nav-languages">Languages</a>
+    <a href="#certifications" class="nav-item" data-key="nav-certifications">Certifications</a>
+  </nav>
+
+  <!-- Theme & Language Controls -->
+  <div class="controls">
+    <div class="control-btn" onclick="toggleLanguage()">
+      <span>🌐</span>
+      <span id="language-text">EN</span>
     </div>
-</div>
+    <div class="control-btn" onclick="toggleTheme()">
+      <span id="theme-icon">☀️</span>
+      <span id="theme-text" data-key="theme-light">Light</span>
+    </div>
+  </div>
 
+  <div class="container">
+  </div>
 
-  </body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="header-text">
+          <h1 data-key="name">Maroussia Arnault</h1>
+          <p class="subtitle" data-key="title">Senior Technical Consultant & Digital Transformation Architect</p>
+          <p class="description" data-key="description">
+            Strategic technology leader with 7+ years driving digital transformation, enterprise architecture,
+            and cybersecurity initiatives. Specialized in technical product ownership, IT consulting,
+            and delivering scalable solutions for SMEs and Fortune 500 clients.
+          </p>
+
+          <!-- Top Skills -->
+          <div class="header-skills">
+            <div class="skills-row">
+              <span class="header-skill">Digital Transformation</span>
+              <span class="header-skill">Enterprise Architecture</span>
+              <span class="header-skill">Technical Product Management</span>
+            </div>
+            <div class="skills-row">
+              <span class="header-skill">Cybersecurity Strategy</span>
+              <span class="header-skill">API Design & Strategy</span>
+              <span class="header-skill">Microservices Architecture</span>
+            </div>
+          </div>
+          <div class="contact-info">
+            <a href="mailto:maroussia.arnault@example.com" class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+              maroussia.arnault@example.com
+            </a>
+            <a href="https://linkedin.com/in/maroussiaarnault" class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/Ahiiia92" class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <span class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              Berlin, Germany
+            </span>
+          </div>
+        </div>
+        <div class="profile-image">
+          <img src="images/marou.jpg" alt="Maroussia Arnault - Professional Photo" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Left Column -->
+      <div class="left-column">
+        <!-- Professional Experience -->
+        <section class="section" id="experience">
+          <h2 class="section-title" data-key="section-experience">Professional Experience</h2>
+
+          <div class="experience-item">
+            <div class="job-header">
+              <div class="job-info">
+                <h3>Fullstack Software Engineer</h3>
+                <p class="company-name">Mercedes Benz Tech Innovation – IT Services</p>
+                <span class="job-location">
+                  <svg class="location-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  Ulm/Berlin, Germany | Remote
+                </span>
+              </div>
+              <div class="job-duration">March 2022 – Present</div>
+            </div>
+            <p class="job-description">
+              Leading development of scalable microservices for omnichannel car sales solutions,
+              with focus on electric vehicle integration and enterprise-grade system architecture.
+            </p>
+            <ul class="job-highlights">
+              <li>Designed and implemented microservices architecture supporting omnichannel sales platforms</li>
+              <li>Enhanced API design and documentation ensuring seamless cross-functional integration</li>
+              <li>Implemented CI/CD pipelines using Kubernetes and GitHub Actions, improving deployment efficiency by
+                40%</li>
+              <li>Collaborated with product managers and cross-functional teams on strategic technology initiatives</li>
+              <li>Mentored junior developers and contributed to technical architecture decisions</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-header">
+              <div class="job-info">
+                <h3>IT Technical Consultant | API Owner</h3>
+                <p class="company-name">ISG (Information Services Group)</p>
+                <span class="job-location">
+                  <svg class="location-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  Berlin, Germany
+                </span>
+              </div>
+              <div class="job-duration">March 2021 – January 2022</div>
+            </div>
+            <p class="job-description">
+              <strong>Client:</strong> Volkswagen Financial Services Digital Unit
+            </p>
+            <ul class="job-highlights">
+              <li>Guided design and implementation of digital transformation strategies for enterprise clients</li>
+              <li>Conducted comprehensive technology assessments to optimize software architectures</li>
+              <li>Collaborated with C-level executives to align IT solutions with business priorities</li>
+              <li>Delivered strategic recommendations resulting in 25% improvement in system performance</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-header">
+              <div class="job-info">
+                <h3>Java Software Developer & Technical Consultant</h3>
+                <p class="company-name">FDM Group</p>
+                <span class="job-location">
+                  <svg class="location-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  Berlin, Germany | Remote
+                </span>
+              </div>
+              <div class="job-duration">October 2020 – March 2022</div>
+            </div>
+            <ul class="job-highlights">
+              <li>Completed intensive training in enterprise software development and design patterns</li>
+              <li>Specialized in Java EE, Spring Boot, and modern software architecture</li>
+              <li>Developed expertise in UNIX systems and database design</li>
+              <li>Applied consulting methodologies for client-facing technical projects</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-header">
+              <div class="job-info">
+                <h3>Teaching Assistant – Freelance</h3>
+                <p class="company-name">Le Wagon – Coding Bootcamp</p>
+                <span class="job-location">
+                  <svg class="location-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  Berlin, Germany
+                </span>
+              </div>
+              <div class="job-duration">April 2020 – October 2020</div>
+            </div>
+            <ul class="job-highlights">
+              <li>Mentored students in object-oriented programming concepts and MVC design patterns</li>
+              <li>Taught backend programming (Ruby, SQL) and frontend technologies (CSS Grid, ES6)</li>
+              <li>Provided technical guidance and emotional support during intensive bootcamp program</li>
+              <li>Contributed to curriculum development and assessment methodologies</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-header">
+              <div class="job-info">
+                <h3>Digital Transformation Consultant</h3>
+                <p class="company-name">Backbone Consultancy</p>
+                <span class="job-location">
+                  <svg class="location-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  Berlin, Germany
+                </span>
+              </div>
+              <div class="job-duration">November 2019 – March 2020</div>
+            </div>
+            <p class="job-description">
+              Strategic technology consulting for mid-market companies undergoing digital transformation initiatives.
+            </p>
+            <ul class="job-highlights">
+              <li>Conducted comprehensive technology assessments for enterprise clients across various industries</li>
+              <li>Developed digital transformation roadmaps and implementation strategies</li>
+              <li>Led stakeholder workshops to align business objectives with technology capabilities</li>
+              <li>Provided recommendations on cloud migration, API strategy, and modern software architectures</li>
+              <li>Facilitated cross-functional collaboration between business and technical teams</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-header">
+              <div class="job-info">
+                <h3>Technical Business Analyst & IT Consultant</h3>
+                <p class="company-name">NTT Data Europe & LATAM</p>
+                <span class="job-location">
+                  <svg class="location-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  Barcelona, Spain
+                </span>
+              </div>
+              <div class="job-duration">June 2018 – October 2019</div>
+            </div>
+            <p class="job-description">
+              Enterprise consulting role focused on large-scale digital transformation projects for Fortune 500 clients.
+            </p>
+            <ul class="job-highlights">
+              <li>Analyzed complex business requirements and translated them into technical specifications</li>
+              <li>Led requirements gathering sessions with C-level executives and technical stakeholders</li>
+              <li>Designed and documented enterprise software solutions for multinational corporations</li>
+              <li>Managed client relationships and delivered strategic technology consulting services</li>
+              <li>Coordinated with international development teams across multiple time zones</li>
+              <li>Specialized in financial services and telecommunications industry solutions</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="job-header">
+              <div class="job-info">
+                <h3>Co-Founder & Operations Lead</h3>
+                <p class="company-name">Kidner Project - Blockchain Healthcare Platform</p>
+                <span class="job-location">
+                  <svg class="location-icon" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                  </svg>
+                  Berlin, Germany | Remote
+                </span>
+              </div>
+              <div class="job-duration">October 2016 – October 2020</div>
+            </div>
+            <p class="job-description">
+              <strong>Mission:</strong> Open-source platform leveraging blockchain technology to optimize
+              kidney paired exchange programs and improve transplant accessibility globally.
+            </p>
+            <ul class="job-highlights">
+              <li>Led product management and strategic business development initiatives</li>
+              <li>Developed comprehensive business and financial planning models</li>
+              <li>Conducted market research and competitive analysis in healthcare technology</li>
+              <li>Featured in Blockchain For Social Impact Incubator program</li>
+              <li>Managed cross-functional team of developers, researchers, and healthcare professionals</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right Column -->
+      <div class="right-column">
+        <!-- Technical Skills -->
+        <section class="section" id="skills">
+          <h2 class="section-title" data-key="section-skills">Technical Skills</h2>
+
+          <h3 style="color: var(--accent-primary); margin-bottom: var(--space-md);">Programming Languages</h3>
+          <div class="skills-grid">
+            <div class="skill-item">Kotlin</div>
+            <div class="skill-item">Java</div>
+            <div class="skill-item">Spring Boot</div>
+            <div class="skill-item">Rust</div>
+            <div class="skill-item">TypeScript</div>
+          </div>
+
+          <h3 style="color: var(--accent-primary); margin: var(--space-xl) 0 var(--space-md);">Technologies & Tools</h3>
+          <div class="skills-grid">
+            <div class="skill-item">Docker</div>
+            <div class="skill-item">Kubernetes</div>
+            <div class="skill-item">GitHub Actions</div>
+            <div class="skill-item">Datadog</div>
+            <div class="skill-item">REST APIs</div>
+            <div class="skill-item">GraphQL</div>
+          </div>
+
+          <h3 style="color: var(--accent-primary); margin: var(--space-xl) 0 var(--space-md);">Methodologies</h3>
+          <div class="skills-grid">
+            <div class="skill-item">Agile/Scrum</div>
+            <div class="skill-item">DevOps</div>
+            <div class="skill-item">TDD</div>
+            <div class="skill-item">Microservices</div>
+            <div class="skill-item">CI/CD</div>
+            <div class="skill-item">API Design</div>
+          </div>
+        </section>
+
+        <!-- Consulting Skills -->
+        <section class="section">
+          <h2 class="section-title">Consulting Expertise</h2>
+          <div class="skills-grid">
+            <div class="skill-item">Digital Transformation</div>
+            <div class="skill-item">Enterprise Architecture</div>
+            <div class="skill-item">Strategic Planning</div>
+            <div class="skill-item">Stakeholder Management</div>
+            <div class="skill-item">Requirements Analysis</div>
+            <div class="skill-item">Technology Assessment</div>
+            <div class="skill-item">Change Management</div>
+            <div class="skill-item">Project Management</div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="section" id="education">
+          <h2 class="section-title" data-key="section-education">Education</h2>
+
+          <div class="education-item">
+            <h3 class="education-title">Master of Science in Management</h3>
+            <p class="education-institution">EBS Universität für Wirtschaft und Recht</p>
+            <div class="education-meta">
+              <span class="education-date">September 2016 – December 2017</span>
+              <span class="education-location">
+                <svg class="location-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                Oestrich-Winkel, Germany
+              </span>
+            </div>
+            <p class="education-description">
+              <strong>Thesis:</strong> "Blockchain Technology to Enhance Kidney Transplant Allocation Systems"
+            </p>
+          </div>
+
+          <div class="education-item">
+            <h3 class="education-title">MSc in IT Strategic Management</h3>
+            <p class="education-institution">Universitat Pompeu Fabra – BSM</p>
+            <div class="education-meta">
+              <span class="education-date">September 2015 – December 2016</span>
+              <span class="education-location">
+                <svg class="location-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                Barcelona, Spain
+              </span>
+            </div>
+            <p class="education-description">
+              <strong>Thesis:</strong> "The Strategic Potential of Blockchain Technology in Healthcare Industry
+              Transformation"
+            </p>
+          </div>
+
+          <div class="education-item">
+            <h3 class="education-title">Bachelor of Science in General Management</h3>
+            <p class="education-institution">EBS Universität für Wirtschaft und Recht</p>
+            <div class="education-meta">
+              <span class="education-date">January 2012 – June 2015</span>
+              <span class="education-location">
+                <svg class="location-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                Oestrich-Winkel, Germany
+              </span>
+            </div>
+            <p class="education-description">
+              <strong>Thesis:</strong> "Information Systems Integration in Healthcare Sector Operations"
+            </p>
+          </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="section" id="languages">
+          <h2 class="section-title" data-key="section-languages">Languages</h2>
+
+          <div class="language-item">
+            <h3 class="language-name">French</h3>
+            <p class="language-level">Native Speaker</p>
+          </div>
+
+          <div class="language-item">
+            <h3 class="language-name">English</h3>
+            <p class="language-level">Fluent (C1)</p>
+          </div>
+
+          <div class="language-item">
+            <h3 class="language-name">German</h3>
+            <p class="language-level">Upper Intermediate (B2.2)</p>
+          </div>
+
+          <div class="language-item">
+            <h3 class="language-name">Spanish</h3>
+            <p class="language-level">Upper Intermediate (B1.2)</p>
+          </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section" id="certifications">
+          <h2 class="section-title">Certifications & Achievements</h2>
+
+          <div class="certification-item">
+            <h3 class="certification-name">Professional Speaker</h3>
+            <p class="certification-issuer">Blockchain Day Oslo</p>
+            <span class="certification-date">2019</span>
+            <p class="certification-description">
+              Featured speaker on blockchain technology applications in healthcare sector
+            </p>
+          </div>
+
+          <div class="certification-item">
+            <h3 class="certification-name">Industry Participant</h3>
+            <p class="certification-issuer">Mobile World Congress Barcelona</p>
+            <span class="certification-date">2016</span>
+            <p class="certification-description">
+              Staff member and technology innovation showcase participant
+            </p>
+          </div>
+
+          <div class="certification-item">
+            <h3 class="certification-name">Blockchain for Social Impact</h3>
+            <p class="certification-issuer">Incubator Program</p>
+            <span class="certification-date">2018-2020</span>
+            <p class="certification-description">
+              Featured project in blockchain technology for healthcare transformation
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-main">
+          <div class="footer-section">
+            <h3>Maroussia Arnault</h3>
+            <p class="footer-text">
+              Senior Technical Consultant & Digital Transformation Architect specializing in enterprise architecture,
+              cybersecurity strategy, and technical product ownership for global organizations.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <div class="footer-links">
+              <a href="#experience" class="footer-link">Experience</a>
+              <a href="#skills" class="footer-link">Skills</a>
+              <a href="#education" class="footer-link">Education</a>
+              <a href="#languages" class="footer-link">Languages</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <div class="footer-links">
+              <a href="mailto:maroussia.arnault@example.com" class="footer-link">
+                <svg class="footer-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+                Contact
+              </a>
+              <a href="https://linkedin.com/in/maroussiaarnault" class="footer-link">
+                <svg class="footer-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                LinkedIn
+              </a>
+              <a href="https://github.com/Ahiiia92" class="footer-link">
+                <svg class="footer-icon" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                GitHub
+              </a>
+              <a href="#" class="footer-link">Portfolio</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Maroussia Arnault. All rights reserved. | Berlin, Germany</p>
+          <p class="footer-note">Available for consulting opportunities worldwide</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Multilingual Content
+    const translations = {
+      en: {
+        'name': 'Maroussia Arnault',
+        'title': 'Senior Technical Consultant & Digital Transformation Architect',
+        'description': 'Strategic technology leader with 7+ years driving digital transformation, enterprise architecture, and cybersecurity initiatives. Specialized in technical product ownership, IT consulting, and delivering scalable solutions for SMEs and Fortune 500 clients.',
+        'section-experience': 'Professional Experience',
+        'section-skills': 'Technical Skills',
+        'section-education': 'Education',
+        'section-languages': 'Languages',
+        'navigation': 'Navigation',
+        'nav-experience': 'Professional Experience',
+        'nav-skills': 'Technical Skills',
+        'nav-education': 'Education',
+        'nav-languages': 'Languages',
+        'nav-certifications': 'Certifications',
+        'theme-light': 'Light',
+        'theme-dark': 'Dark'
+      },
+      fr: {
+        'name': 'Maroussia Arnault',
+        'title': 'Consultante Technique Senior & Architecte Transformation Numérique',
+        'description': 'Leader technologique stratégique avec 7+ années d\'expérience en transformation numérique, architecture d\'entreprise et initiatives de cybersécurité. Spécialisée en propriété technique de produit, conseil IT et solutions évolutives pour PME et clients Fortune 500.',
+        'section-experience': 'Expérience Professionnelle',
+        'section-skills': 'Compétences Techniques',
+        'section-education': 'Formation',
+        'section-languages': 'Langues',
+        'navigation': 'Navigation',
+        'nav-experience': 'Expérience Professionnelle',
+        'nav-skills': 'Compétences Techniques',
+        'nav-education': 'Formation',
+        'nav-languages': 'Langues',
+        'nav-certifications': 'Certifications',
+        'theme-light': 'Clair',
+        'theme-dark': 'Sombre'
+      },
+      de: {
+        'name': 'Maroussia Arnault',
+        'title': 'Senior Technische Beraterin & Digital Transformation Architektin',
+        'description': 'Strategische Technologie-Führungskraft mit 7+ Jahren Erfahrung in digitaler Transformation, Unternehmensarchitektur und Cybersicherheitsinitiativen. Spezialisiert auf technische Produktverantwortung, IT-Beratung und skalierbare Lösungen für KMU und Fortune 500 Kunden.',
+        'section-experience': 'Berufserfahrung',
+        'section-skills': 'Technische Fähigkeiten',
+        'section-education': 'Bildung',
+        'section-languages': 'Sprachen',
+        'navigation': 'Navigation',
+        'nav-experience': 'Berufserfahrung',
+        'nav-skills': 'Technische Fähigkeiten',
+        'nav-education': 'Bildung',
+        'nav-languages': 'Sprachen',
+        'nav-certifications': 'Zertifizierungen',
+        'theme-light': 'Hell',
+        'theme-dark': 'Dunkel'
+      }
+    };
+
+    // Global state
+    let currentTheme = 'light';
+    let currentLanguage = 'en';
+
+    // Language Management
+    function toggleLanguage() {
+      const languages = ['en', 'fr', 'de'];
+      const currentIndex = languages.indexOf(currentLanguage);
+      const nextIndex = (currentIndex + 1) % languages.length;
+      currentLanguage = languages[nextIndex];
+
+      localStorage.setItem('language', currentLanguage);
+      applyLanguage();
+    }
+
+    function applyLanguage() {
+      const languageText = document.getElementById('language-text');
+      languageText.textContent = currentLanguage.toUpperCase();
+
+      // Update all elements with data-key attributes
+      const elements = document.querySelectorAll('[data-key]');
+      elements.forEach(element => {
+        const key = element.getAttribute('data-key');
+        if (translations[currentLanguage] && translations[currentLanguage][key]) {
+          element.textContent = translations[currentLanguage][key];
+        }
+      });
+    }
+
+    // Theme Management
+    function initializeTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (savedTheme) {
+        currentTheme = savedTheme;
+      } else if (prefersDarkMode) {
+        currentTheme = 'dark';
+      }
+
+      applyTheme();
+    }
+
+    function toggleTheme() {
+      currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme', currentTheme);
+      applyTheme();
+    }
+
+    function applyTheme() {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      const themeIcon = document.getElementById('theme-icon');
+      const themeText = document.getElementById('theme-text');
+
+      if (currentTheme === 'dark') {
+        themeIcon.textContent = '🌙';
+        themeText.setAttribute('data-key', 'theme-dark');
+      } else {
+        themeIcon.textContent = '☀️';
+        themeText.setAttribute('data-key', 'theme-light');
+      }
+
+      // Update theme text based on current language
+      const key = themeText.getAttribute('data-key');
+      if (translations[currentLanguage] && translations[currentLanguage][key]) {
+        themeText.textContent = translations[currentLanguage][key];
+      }
+    }
+
+    // Mobile Navigation
+    function toggleNav() {
+      const navMenu = document.getElementById('navMenu');
+      const hamburger = document.getElementById('hamburger');
+
+      if (navMenu.style.display === 'block') {
+        navMenu.style.display = 'none';
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+      } else {
+        navMenu.style.display = 'block';
+        setTimeout(() => navMenu.classList.add('active'), 10);
+        hamburger.classList.add('active');
+      }
+    }
+
+    // Initialize everything
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize theme and language
+      initializeTheme();
+
+      const savedLanguage = localStorage.getItem('language');
+      if (savedLanguage && translations[savedLanguage]) {
+        currentLanguage = savedLanguage;
+      }
+      applyLanguage();
+
+      // Add smooth scrolling to navigation links
+      document.querySelectorAll('.nav-item[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const section = document.getElementById(targetId);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            toggleNav(); // Close menu after navigation
+          }
+        });
+      });
+
+      // Add subtle animations to sections
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.addEventListener('mouseenter', function () {
+          this.style.transform = 'translateY(-2px)';
+        });
+        section.addEventListener('mouseleave', function () {
+          this.style.transform = 'translateY(0)';
+        });
+      });
+
+      // Add click effects to skill items
+      const skillItems = document.querySelectorAll('.skill-item');
+      skillItems.forEach(item => {
+        item.addEventListener('click', function () {
+          this.style.animation = 'none';
+          setTimeout(() => {
+            this.style.animation = 'pulse 0.6s ease';
+          }, 10);
+          setTimeout(() => {
+            this.style.animation = 'none';
+          }, 600);
+        });
+      });
+    });
+
+    // Add pulse animation for skill items
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+
 </html>
